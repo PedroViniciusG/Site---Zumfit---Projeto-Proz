@@ -1,0 +1,292 @@
+/* Reset e Variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Layout Split (Dividido) */
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Container do Formulário (Lado Esquerdo) */
+.login-container {
+    padding: 40px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* Botão Voltar */
+.btn-back {
+    position: absolute;
+    top: 40px;
+    left: 12%;
+    text-decoration: none;
+    color: #777777;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-back:hover {
+    color: #000000;
+    transform: translateX(-2px);
+}
+
+/* Identidade Visual */
+.login-brand {
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    margin-top: 40px;
+}
+
+.logo-icon {
+    font-size: 16px;
+}
+
+.login-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.login-header p {
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+/* Estrutura do Formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.password-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot-password {
+    font-size: 13px;
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* Campos de Input Avançados com Efeito Focus */
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-field i {
+    position: absolute;
+    left: 16px;
+    color: #999999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #111111;
+    background-color: #ffffff;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Efeito de destaque ao clicar no input */
+.input-field input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.input-field input:focus + i {
+    color: #000000;
+}
+
+/* Botão de Olho (Mostrar Senha) */
+.btn-toggle-password {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #999999;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.btn-toggle-password:hover {
+    color: #111111;
+}
+
+/* Mensagem de Erro */
+.error-message {
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Botão Submit */
+.btn-submit {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: #222222;
+}
+
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+/* Rodapé do Login */
+.login-footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.login-footer a {
+    color: #111111;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Painel Lateral Direito (Imagem e Citação) */
+.login-sidebar {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.sidebar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.sidebar-content {
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    max-width: 480px;
+}
+
+.sidebar-content blockquote {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .login-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .login-sidebar {
+        display: none;
+    }
+    .login-container {
+        padding: 40px 6%;
+        align-items: center;
+    }
+    .btn-back {
+        left: 6%;
+    }
+}
