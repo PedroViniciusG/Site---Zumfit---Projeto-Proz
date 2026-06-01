@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ZUMFIT - Login</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="../css/login.css" />
+    </head>
+    <body>
+        <div class="login-wrapper">
+            <div class="login-container">
+                <div class="login-header">
+                    <a href="../index.html" class="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i> Voltar ao início
+                    </a>
+                    <div class="login-brand">
+                        <i class="fa-solid fa-asterisk logo-icon"></i> ZUMFIT
+                    </div>
+                    <h1>Acesse sua Área do Aluno</h1>
+                    <p>
+                        Insira suas credenciais para acessar seus treinos e
+                        planos.
+                    </p>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="seuemail@exemplo.com"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="password-label-row">
+                            <label for="password">Senha</label>
+                            <a href="#" class="forgot-password"
+                                >Esqueceu a senha?</a
+                            >
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Sua senha secreta"
+                                required
+                            />
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="btn-toggle-password"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="errorMessage" class="error-message hidden">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span id="errorText"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        Entrar na Conta
+                    </button>
+                </form>
+
+                <div class="login-footer">
+                    <p>
+                        Não tem uma conta?
+                        <a href="../index.html">Escolha um ZumPlano</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="login-sidebar">
+                <div class="sidebar-overlay"></div>
+                <div class="sidebar-content">
+                    <blockquote>
+                        "O ritmo te move, a força te transforma."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/login.js"></script>
+    </body>
+</html>
