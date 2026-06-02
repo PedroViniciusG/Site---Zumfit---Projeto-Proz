@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("🔒 Sistema de Autenticação Ativo");
 
     const loginForm = document.getElementById("loginForm");
     const passwordInput = document.getElementById("password");
