@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorMessage = document.getElementById("errorMessage");
     const errorText = document.getElementById("errorText");
 
+
     togglePasswordBtn.addEventListener("click", function () {
         const isPassword = passwordInput.getAttribute("type") === "password";
-
         passwordInput.setAttribute("type", isPassword ? "text" : "password");
 
-        const icon = this.querySelector("i");
+        
+        const icon = this.querySelector("i") || this;
+        
         if (isPassword) {
             icon.classList.remove("fa-regular", "fa-eye");
             icon.classList.add("fa-solid", "fa-eye-slash");
@@ -21,23 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+   
     loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
         const email = document.getElementById("email").value.trim();
         const password = passwordInput.value;
 
+        
         errorMessage.classList.add("hidden");
 
-        if (password.length < 6) {
-            errorText.textContent =
-                "A senha precisa conter pelo menos 6 caracteres.";
+        
+        if (email === "") {
+            errorText.textContent = "Por favor, insira o seu e-mail.";
             errorMessage.classList.remove("hidden");
             return;
         }
 
-    );
+        
+        if (password.length < 6) {
+            errorText.textContent = "A senha precisa conter pelo menos 6 caracteres.";
+            errorMessage.classList.remove("hidden");
+            return;
+        }
 
+        
         window.location.href = "dashboard.html";
     });
 });
