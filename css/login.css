@@ -239,7 +239,7 @@ body {
 /* Painel Lateral Direito (Imagem e Citação) */
 .login-sidebar {
     position: relative;
-    background-image: url("../img/img_login/goku_selfie.png");
+    background-image: url("../img/img_landingPage/img_login/goku_selfie.png");
     background-size: cover;
     background-position: center;
     display: flex;
