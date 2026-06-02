@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        console.log("Autenticando usuário:", email);
+    );
 
         window.location.href = "dashboard.html";
     });
