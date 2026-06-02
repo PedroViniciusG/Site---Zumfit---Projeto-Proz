@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Interface baseada na imagem carregada com sucesso!");
 
     const links = document.querySelectorAll(".nav-links a");
 
