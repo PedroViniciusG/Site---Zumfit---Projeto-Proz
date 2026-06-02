@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("🏋️ Área do Aluno Carregada com Segurança!");
 
     const menuItems = document.querySelectorAll(".menu-item");
 
